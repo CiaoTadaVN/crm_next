@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "autoname": "field:tittle",
+ "creation": "2024-08-04 19:41:27.693464",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tittle",
+  "state_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "tittle",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tittle",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "state_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-04 19:59:43.717828",
+ "modified_by": "Administrator",
+ "module": "TADA CRM",
+ "name": "District",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
