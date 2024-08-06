@@ -1,46 +1,213 @@
 {
  "actions": [],
- "autoname": "autoincrement",
+ "allow_import": 1,
+ "autoname": "naming_series:",
  "creation": "2024-08-04 23:08:11.780330",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "data_jyzw",
+  "general_information_section",
+  "naming_series",
+  "policy_owner",
+  "regular",
   "status",
+  "effective_date_apl",
+  "date_of_redelivery_contract",
+  "confirmation_date_on_las",
   "column_break_gjtk",
-  "customer"
+  "contract_id",
+  "digital_profile",
+  "social_id",
+  "effective_date",
+  "initial_issue_date",
+  "final_issue_date",
+  "days_of_the_contract",
+  "section_break_svtk",
+  "products",
+  "fee_section",
+  "next_premium_due_date",
+  "regular_premium",
+  "cash_advance_opl",
+  "column_break_czwq",
+  "previous_period_surplus_premium",
+  "automatic_premium_payment",
+  "automatic_premium_payment_2",
+  "others_section",
+  "pruonline"
  ],
  "fields": [
   {
-   "fieldname": "data_jyzw",
-   "fieldtype": "Data"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
-   "options": "In effect"
+   "options": "\nIn effect\nTerminated"
   },
   {
    "fieldname": "column_break_gjtk",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "customer",
+   "fetch_from": "policy_owner.social_id",
+   "fieldname": "social_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Social ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "policy_owner",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
+   "label": "Policy Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "regular",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Regular",
+   "options": "\nMonthly\nQuarterly\nHalf Yearly\nYearly\nSingle period fee"
+  },
+  {
+   "default": "0",
+   "description": "Agree to receive the Insurance Contract through the PruOnline account.",
+   "fieldname": "pruonline",
+   "fieldtype": "Check",
+   "label": "PruOnline"
+  },
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "others_section",
+   "fieldtype": "Section Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "initial_issue_date",
+   "fieldtype": "Date",
+   "label": "Initial Issue Date"
+  },
+  {
+   "fieldname": "final_issue_date",
+   "fieldtype": "Date",
+   "label": "Final Issue Date"
+  },
+  {
+   "fieldname": "effective_date_apl",
+   "fieldtype": "Date",
+   "label": "Effective Date (APL)"
+  },
+  {
+   "fieldname": "date_of_redelivery_contract",
+   "fieldtype": "Date",
+   "label": "Date of Re-delivery of Paper Contract"
+  },
+  {
+   "fieldname": "fee_section",
+   "fieldtype": "Section Break",
+   "label": "Fee"
+  },
+  {
+   "fieldname": "next_premium_due_date",
+   "fieldtype": "Date",
+   "label": "Next Premium Due Date"
+  },
+  {
+   "fieldname": "regular_premium",
+   "fieldtype": "Currency",
+   "label": "Regular Premium",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "column_break_czwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_period_surplus_premium",
+   "fieldtype": "Currency",
+   "label": "Previous Period Surplus Premium",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "automatic_premium_payment",
+   "fieldtype": "Currency",
+   "label": "Automatic Premium Payment",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "automatic_premium_payment_2",
+   "fieldtype": "Currency",
+   "label": "Automatic Premium Payment #2",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "cash_advance_opl",
+   "fieldtype": "Currency",
+   "label": "Cash Advance - OPL",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "digital_profile",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Digital Profile"
+  },
+  {
+   "fieldname": "confirmation_date_on_las",
+   "fieldtype": "Date",
+   "label": "Confirmation Date On LAS"
+  },
+  {
+   "fieldname": "section_break_svtk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "products",
+   "fieldtype": "Table",
+   "label": "Products",
+   "options": "Contract Item"
+  },
+  {
+   "fieldname": "days_of_the_contract",
+   "fieldtype": "Int",
+   "label": "Days Of The Contract",
+   "non_negative": 1
+  },
+  {
+   "default": "HD-.{contract_id}.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "HD-.{contract_id}.-"
+  },
+  {
+   "fieldname": "contract_id",
+   "fieldtype": "Data",
+   "label": "Contract ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 23:13:11.657568",
+ "modified": "2024-08-06 13:54:22.624277",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Contract",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -58,5 +225,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

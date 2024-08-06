@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-05 16:42:57.731642",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_information_section",
+  "naming_series",
+  "opportunity_from",
+  "customer_name",
+  "probability",
+  "column_break_kogk",
+  "sales_stage",
+  "source",
+  "opportunity_owner",
+  "expected_closing",
+  "status",
+  "opportunity_value_section",
+  "currency",
+  "conversion_rate",
+  "column_break_iozz",
+  "opportunity_amount",
+  "base_opportunity_amount",
+  "lost_reasons_section",
+  "lost_reasons",
+  "order_lost_reason",
+  "column_break_fojf",
+  "competitors"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "CRM-OPP-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kogk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunity_from",
+   "fieldtype": "Link",
+   "label": "Opportunity From",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Lead Source"
+  },
+  {
+   "fieldname": "opportunity_owner",
+   "fieldtype": "Link",
+   "label": "Opportunity Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nQuotation\nConverted\nLost\nReplied\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "sales_stage",
+   "fieldtype": "Link",
+   "label": "Sales Stage",
+   "options": "Sales Stage"
+  },
+  {
+   "fieldname": "probability",
+   "fieldtype": "Percent",
+   "label": "Probability (%)"
+  },
+  {
+   "fieldname": "expected_closing",
+   "fieldtype": "Date",
+   "label": "Expected Closing Date"
+  },
+  {
+   "fieldname": "opportunity_value_section",
+   "fieldtype": "Section Break",
+   "label": "Opportunity Value"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate"
+  },
+  {
+   "fieldname": "column_break_iozz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opportunity_amount",
+   "fieldtype": "Currency",
+   "label": "Opportunity Amount"
+  },
+  {
+   "fieldname": "base_opportunity_amount",
+   "fieldtype": "Currency",
+   "label": "Opportunity Amount (Company Currency)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "lost_reasons_section",
+   "fieldtype": "Section Break",
+   "label": "Lost Reasons"
+  },
+  {
+   "fieldname": "lost_reasons",
+   "fieldtype": "Table MultiSelect",
+   "label": "Lost Reasons",
+   "options": "Opportunity Lost Reason Detail"
+  },
+  {
+   "fieldname": "column_break_fojf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_lost_reason",
+   "fieldtype": "Small Text",
+   "label": "Detailed Reason"
+  },
+  {
+   "fieldname": "competitors",
+   "fieldtype": "Data",
+   "label": "Competitors"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-06 10:01:54.379733",
+ "modified_by": "Administrator",
+ "module": "TADA CRM",
+ "name": "Opportunity",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

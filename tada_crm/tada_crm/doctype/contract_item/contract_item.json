@@ -1,78 +1,92 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2024-08-04 23:44:07.477231",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "customer",
-  "product_code",
   "product_name",
-  "product_type",
   "annual_premium",
-  "face_amount"
+  "face_amount",
+  "column_break_bfyp",
+  "product_code",
+  "premium_paid_until_date",
+  "maturity_date",
+  "status"
  ],
  "fields": [
   {
    "fieldname": "product_code",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Product code",
-   "options": "Product",
-   "reqd": 1
+   "label": "Product Code",
+   "options": "Product"
   },
   {
    "fetch_from": "product_code.product_name",
    "fieldname": "product_name",
    "fieldtype": "Data",
-   "label": "Product name",
-   "read_only": 1
+   "label": "Product Name"
   },
   {
    "fetch_from": "product_code.annual_premium",
    "fieldname": "annual_premium",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Annual premium",
+   "label": "Annual Premium",
    "non_negative": 1,
-   "precision": "0",
-   "read_only": 1
+   "precision": "0"
   },
   {
    "fetch_from": "product_code.face_amount",
    "fieldname": "face_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Face amount",
+   "label": "Face Amount",
    "non_negative": 1,
-   "precision": "0",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "product_code.product_type",
-   "fieldname": "product_type",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Product type",
-   "read_only": 1
+   "precision": "0"
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
+   "options": "Customer"
+  },
+  {
+   "fieldname": "premium_paid_until_date",
+   "fieldtype": "Date",
+   "label": "Premium Paid Until Date"
+  },
+  {
+   "fieldname": "maturity_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Maturity Date"
+  },
+  {
+   "fieldname": "column_break_bfyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-05 00:35:55.766810",
+ "modified": "2024-08-06 13:18:25.815347",
  "modified_by": "Administrator",
  "module": "TADA CRM",
- "name": "Sale Order Item",
+ "name": "Contract Item",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

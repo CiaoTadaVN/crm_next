@@ -1,33 +1,44 @@
 {
  "actions": [],
- "autoname": "field:tittle",
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2024-08-04 19:46:07.951330",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "tittle",
-  "district_id"
+  "title",
+  "district",
+  "state"
  ],
  "fields": [
   {
-   "fieldname": "district_id",
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
    "fieldtype": "Link",
    "label": "District",
    "options": "District",
    "reqd": 1
   },
   {
-   "fieldname": "tittle",
+   "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Tittle",
+   "in_standard_filter": 1,
+   "label": "Title",
    "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 20:00:21.313037",
+ "modified": "2024-08-06 11:50:05.158258",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Ward",

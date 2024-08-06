@@ -1,14 +1,18 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:product_name",
  "creation": "2024-08-04 23:13:28.893193",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "general_information_section",
+  "product_title",
   "product_name",
   "product_type",
   "column_break_hkwg",
+  "product_group",
   "face_amount",
   "annual_premium"
  ],
@@ -17,17 +21,15 @@
    "fieldname": "product_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Product name",
-   "reqd": 1,
+   "label": "Product Name",
    "unique": 1
   },
   {
    "fieldname": "product_type",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Product type",
-   "options": "Base plan\nRiders",
-   "reqd": 1
+   "label": "Product Type",
+   "options": "Base plan\nRider"
   },
   {
    "fieldname": "column_break_hkwg",
@@ -36,23 +38,38 @@
   {
    "fieldname": "face_amount",
    "fieldtype": "Currency",
-   "label": "Face amount",
+   "label": "Face Amount",
    "non_negative": 1,
-   "precision": "0",
-   "reqd": 1
+   "precision": "0"
   },
   {
    "fieldname": "annual_premium",
    "fieldtype": "Currency",
-   "label": "Annual premium",
+   "label": "Annual Premium",
    "non_negative": 1,
-   "precision": "0",
-   "reqd": 1
+   "precision": "0"
+  },
+  {
+   "fieldname": "product_title",
+   "fieldtype": "Data",
+   "label": "Product Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_group",
+   "fieldtype": "Link",
+   "label": "Product Group",
+   "options": "Product Group"
+  },
+  {
+   "fieldname": "general_information_section",
+   "fieldtype": "Section Break",
+   "label": "General Information"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 23:55:36.497329",
+ "modified": "2024-08-06 12:07:05.124183",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Product",

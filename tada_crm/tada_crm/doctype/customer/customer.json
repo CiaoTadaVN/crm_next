@@ -1,7 +1,8 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:{customer_id}-{fullname}",
+ "allow_rename": 1,
+ "autoname": "field:customer_id",
  "creation": "2024-08-04 21:14:32.902917",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,8 +16,10 @@
   "column_break_vrvf",
   "gender",
   "phone",
-  "homephone",
+  "home_phone",
   "business_phone",
+  "from_lead",
+  "from_opportunity",
   "address_section",
   "street",
   "district",
@@ -43,15 +46,12 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Social ID",
-   "length": 12,
-   "reqd": 1
+   "label": "Social ID"
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email",
-   "options": "Email"
+   "label": "Email"
   },
   {
    "fieldname": "column_break_vrvf",
@@ -59,10 +59,10 @@
   },
   {
    "fieldname": "gender",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Gender",
-   "options": "Male\nFemale\nOther"
+   "options": "Gender"
   },
   {
    "fieldname": "phone",
@@ -70,14 +70,12 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Phone",
-   "length": 10,
    "non_negative": 1
   },
   {
    "fieldname": "business_phone",
    "fieldtype": "Data",
    "label": "Business Phone",
-   "length": 10,
    "non_negative": 1
   },
   {
@@ -92,9 +90,8 @@
   },
   {
    "fieldname": "district",
-   "fieldtype": "Link",
-   "label": "District",
-   "options": "District"
+   "fieldtype": "Data",
+   "label": "District"
   },
   {
    "fieldname": "column_break_ykko",
@@ -102,16 +99,14 @@
   },
   {
    "fieldname": "state",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "State",
-   "link_filters": "[[\"State\",\"country_id\",\"=\",\"Vietnam\"]]",
-   "options": "State"
+   "link_filters": "[[\"State\",\"country_id\",\"=\",\"Vietnam\"]]"
   },
   {
    "fieldname": "ward",
-   "fieldtype": "Link",
-   "label": "Ward",
-   "options": "Ward"
+   "fieldtype": "Data",
+   "label": "Ward"
   },
   {
    "fieldname": "birth_date",
@@ -119,28 +114,38 @@
    "label": "Birth Date"
   },
   {
-   "fieldname": "homephone",
+   "fieldname": "customer_id",
    "fieldtype": "Data",
-   "label": "Home phone",
-   "length": 10,
+   "label": "Customer ID",
+   "non_negative": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "home_phone",
+   "fieldtype": "Data",
+   "label": "Home Phone",
    "non_negative": 1
   },
   {
-   "fieldname": "customer_id",
-   "fieldtype": "Int",
-   "label": "Customer ID",
-   "non_negative": 1,
-   "reqd": 1,
-   "unique": 1
+   "fieldname": "from_lead",
+   "fieldtype": "Link",
+   "label": "From Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "from_opportunity",
+   "fieldtype": "Link",
+   "label": "From Opportunity",
+   "options": "Opportunity"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-05 00:29:47.123959",
+ "modified": "2024-08-06 12:38:20.347708",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Customer",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

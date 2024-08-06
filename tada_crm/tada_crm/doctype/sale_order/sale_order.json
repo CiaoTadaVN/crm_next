@@ -29,13 +29,13 @@
    "fieldname": "product_list",
    "fieldtype": "Table",
    "label": "Product list",
-   "options": "Sale Order Item",
+   "options": "Contract Item",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-04 23:47:42.071507",
+ "modified": "2024-08-05 17:25:17.301999",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Sale Order",
