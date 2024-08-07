@@ -15,7 +15,14 @@ frappe.ui.form.on("Opportunity", {
 				},
 			};
 		});
+		
 	},
-	// refresh(frm) {
-	// },
+	onload: function (frm) {
+		if (frm.is_new()) {
+			frm.doc.user = frappe.session.user;
+		}
+		frm.set_value({
+			"opportunity_owner": frm.doc.user
+		});
+	},
 });

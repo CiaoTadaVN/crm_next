@@ -91,6 +91,8 @@
   {
    "fieldname": "district",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "District"
   },
   {
@@ -100,17 +102,22 @@
   {
    "fieldname": "state",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "State",
    "link_filters": "[[\"State\",\"country_id\",\"=\",\"Vietnam\"]]"
   },
   {
    "fieldname": "ward",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Ward"
   },
   {
    "fieldname": "birth_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Birth Date"
   },
   {
@@ -141,7 +148,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-06 12:38:20.347708",
+ "modified": "2024-08-07 09:03:24.589364",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Customer",

@@ -10,8 +10,8 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/tada_crm/css/tada_crm.css"
-# app_include_js = "/assets/tada_crm/js/tada_crm.js"
+app_include_css = "/assets/tada_crm/css/overrides.css"
+# app_include_js = "/assets/tada_crm/js/bulk_unassign.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/tada_crm/css/tada_crm.css"

@@ -9,6 +9,7 @@
   "general_information_section",
   "naming_series",
   "opportunity_from",
+  "customer_id",
   "customer_name",
   "probability",
   "column_break_kogk",
@@ -148,11 +149,17 @@
    "fieldname": "competitors",
    "fieldtype": "Data",
    "label": "Competitors"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Dynamic Link",
+   "label": "Customer ID",
+   "options": "opportunity_from"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-06 10:01:54.379733",
+ "modified": "2024-08-07 14:14:55.917457",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Opportunity",

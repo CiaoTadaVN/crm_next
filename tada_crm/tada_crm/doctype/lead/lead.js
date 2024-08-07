@@ -16,7 +16,7 @@ frappe.ui.form.on("Lead", {
 	refresh(frm) {
         frm.add_custom_button(__("Create Customer"), () => {
             frappe.new_doc('Customer', {
-                from_lead: frm.doc.id,
+                from_lead: frm.doc.name,
                 fullname: frm.doc.fullname,
                 gender: frm.doc.gender,
                 phone: frm.doc.phone,
