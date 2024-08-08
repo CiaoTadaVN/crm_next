@@ -26,6 +26,11 @@ def reclaim_customer(customers):
 	for deleteShare in shares:
 		frappe.delete_doc("DocShare", deleteShare.name)
 
+
+	toDos = frappe.get_list("ToDo", filters = {"reference_type": "Customer" , "reference_name": ("in", customerNames)})
+	for deleteToDo in toDos:
+		frappe.delete_doc("ToDo", deleteToDo.name)
+
 	frappe.msgprint(_("Deleted all documents successfully"), realtime=True, title=_("Bulk Operation Successful"))
 
 class Customer(Document):
