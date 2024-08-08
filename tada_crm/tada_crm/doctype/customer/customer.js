@@ -11,6 +11,7 @@ frappe.ui.form.on("Customer", {
                 opportunity_from: 'Customer',
                 customer_id: frm.doc.name,
                 customer_name: frm.doc.fullname,
+                phone: frm.doc.phone
             })
         })
 	},

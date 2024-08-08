@@ -1,0 +1,82 @@
+{
+ "charts": [
+  {
+   "chart_name": "C\u01a1 h\u1ed9i m\u1edbi",
+   "label": "C\u01a1 h\u1ed9i m\u1edbi"
+  }
+ ],
+ "content": "[{\"id\":\"FJ2Q6lvAA2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"C\u01a1 h\u1ed9i m\u1edbi\",\"col\":12}},{\"id\":\"ZjimAyPlVN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CRM</span>\",\"col\":12}},{\"id\":\"dcK7C0LldL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":3}},{\"id\":\"ewtPCoxI7c\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Opportunity\",\"col\":3}},{\"id\":\"vJoJpskY3R\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead\",\"col\":3}},{\"id\":\"L08etHohwQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contract\",\"col\":3}},{\"id\":\"dPosWD2Xgy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales</b></span>\",\"col\":12}},{\"id\":\"eviHBfEFCG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product\",\"col\":3}},{\"id\":\"b0AXftH32n\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Stage\",\"col\":3}}]",
+ "creation": "2024-08-06 14:40:05.907778",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CRM",
+ "links": [],
+ "modified": "2024-08-08 10:21:11.669354",
+ "modified_by": "Administrator",
+ "module": "TADA CRM",
+ "name": "CRM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Customer",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sales Stage",
+   "link_to": "Sales Stage",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Opportunity",
+   "link_to": "Opportunity",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Lead",
+   "link_to": "Lead",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product",
+   "link_to": "Product",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Contract",
+   "link_to": "Contract",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "CRM"
+}

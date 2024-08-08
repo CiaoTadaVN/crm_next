@@ -170,4 +170,7 @@ Country,Quốc gia,
 Title,Tên,
 Contract ID,Mã hợp đồng,
 Reclaim,Thu hồi,
-Claim Customer,Cấp dữ liệu
+Claim Customer,Cấp dữ liệu,
+Appointment,Lịch hẹn,
+Notes,Ghi chú,
+Customer Info,Thông tin khách hàng,

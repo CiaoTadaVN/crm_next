@@ -8,7 +8,7 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
-
+# export_python_type_annotations = True
 # include js, css files in header of desk.html
 app_include_css = "/assets/tada_crm/css/overrides.css"
 # app_include_js = "/assets/tada_crm/js/bulk_unassign.js"

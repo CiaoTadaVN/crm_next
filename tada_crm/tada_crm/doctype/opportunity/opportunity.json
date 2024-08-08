@@ -6,18 +6,23 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "general_information_section",
-  "naming_series",
+  "section_break_afcu",
   "opportunity_from",
   "customer_id",
   "customer_name",
-  "probability",
-  "column_break_kogk",
+  "appointment",
+  "column_break_uwow",
   "sales_stage",
-  "source",
+  "probability",
+  "phone",
   "opportunity_owner",
+  "column_break_sqwp",
+  "naming_series",
+  "source",
   "expected_closing",
   "status",
+  "section_break_ngix",
+  "notes",
   "opportunity_value_section",
   "currency",
   "conversion_rate",
@@ -32,21 +37,14 @@
  ],
  "fields": [
   {
-   "fieldname": "general_information_section",
-   "fieldtype": "Section Break",
-   "label": "General Information"
-  },
-  {
+   "default": "CRM-OPP-.YYYY.-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Series",
    "options": "CRM-OPP-.YYYY.-",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_kogk",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "opportunity_from",
@@ -63,12 +61,16 @@
   {
    "fieldname": "opportunity_owner",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Opportunity Owner",
    "options": "User"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Open\nQuotation\nConverted\nLost\nReplied\nClosed",
    "reqd": 1
@@ -76,17 +78,22 @@
   {
    "fieldname": "customer_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Customer Name"
   },
   {
    "fieldname": "sales_stage",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Sales Stage",
    "options": "Sales Stage"
   },
   {
    "fieldname": "probability",
    "fieldtype": "Percent",
+   "in_list_view": 1,
    "label": "Probability (%)"
   },
   {
@@ -155,11 +162,47 @@
    "fieldtype": "Dynamic Link",
    "label": "Customer ID",
    "options": "opportunity_from"
+  },
+  {
+   "default": "Today",
+   "fieldname": "appointment",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Appointment"
+  },
+  {
+   "fieldname": "section_break_afcu",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_uwow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_sqwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ngix",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-07 14:14:55.917457",
+ "modified": "2024-08-08 09:53:22.132408",
  "modified_by": "Administrator",
  "module": "TADA CRM",
  "name": "Opportunity",
